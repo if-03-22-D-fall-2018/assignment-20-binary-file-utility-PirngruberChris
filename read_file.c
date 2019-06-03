@@ -16,6 +16,7 @@ int main(int argc, char const *argv[]) {
   struct Person p[CACHE_SIZE];
 
   int n = fread(p, sizeof(struct Person), CACHE_SIZE, fd);
+  fputs("The next free ID is", fd);
   printf("%d items read\n", n);
 
   for (int i = 0; i < CACHE_SIZE; i++) {
